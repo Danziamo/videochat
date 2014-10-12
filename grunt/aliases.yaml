@@ -1,0 +1,13 @@
+default:
+  - jshint
+  - express
+  - watch
+
+serve:devel:
+  - jshint
+  - express
+  - watch
+
+watch:reload:
+  - jshint
+  - express

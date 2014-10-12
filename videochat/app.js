@@ -1,8 +1,11 @@
+/* jshint strict: false */
+
 var express = require('express'),
     swig = require('swig'),
     easyrtc = require('easyrtc'),
     io = require('socket.io'),
-    http = require('http');
+    http = require('http'),
+    app;
 
 app = express();
 app.use(express.static('public'));
@@ -19,4 +22,4 @@ app.get('/', function (req, res) {
 
 var webServer = http.createServer(app).listen(3000);
 var socketServer = io.listen(webServer, {'log level':1});
-var rtc = easyrtc.listen(app, socketServer);
+easyrtc.listen(app, socketServer);

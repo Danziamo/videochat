@@ -4,6 +4,7 @@
   "dependencies": {
     "easyrtc": "^1.0.12",
     "express": "^4.9.7",
+    "socket.io": "^1.1.0",
     "swig": "^1.4.2"
   }
 }

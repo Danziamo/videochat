@@ -8,7 +8,7 @@ var express = require('express'),
     app;
 
 app = express();
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
@@ -23,3 +23,4 @@ app.get('/', function (req, res) {
 var webServer = http.createServer(app).listen(3000);
 var socketServer = io.listen(webServer, {'log level':1});
 easyrtc.listen(app, socketServer);
+

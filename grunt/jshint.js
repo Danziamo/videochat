@@ -7,7 +7,8 @@ module.exports = function (grunt, options) {
         },
         lint: [
             'grunt/**/*.js',
-            'videochat/**/*.js'
+            'videochat/**/*.js',
+            '!videochat/public/js/**/*.js'
         ]
     };
 };

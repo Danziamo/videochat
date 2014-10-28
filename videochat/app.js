@@ -27,8 +27,8 @@ app.get('/roulette', function(req, res) {
 app.get('/conference', function(req, res) {
     res.render('conference', {});
 });
-app.get('/facebook-roulette', function(req, res) {
-    res.render('conference', {});
+app.get('/faceoulette', function(req, res) {
+    res.render('facebook-roulette', {});
 });
 
 var webServer = http.createServer(app).listen(3000);

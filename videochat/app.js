@@ -20,6 +20,17 @@ app.get('/', function (req, res) {
     res.render('index', { /* template locals context */ });
 });
 
+app.get('/roulette', function(req, res) {
+    res.render('roulette', {});
+});
+
+app.get('/conference', function(req, res) {
+    res.render('conference', {});
+});
+app.get('/facebook-roulette', function(req, res) {
+    res.render('conference', {});
+});
+
 var webServer = http.createServer(app).listen(3000);
 var socketServer = io.listen(webServer, {'log level':1});
 easyrtc.listen(app, socketServer);
